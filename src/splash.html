@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <title>BiggBoss App</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: url("assets/images/splash/Splash_new.jpg") no-repeat center center;
+      background-size: 100% 100%;
+    }
+    @media screen and (min-device-height : 800px) {
+      .container {
+        background: url("assets/images/splash/splash_new_x.jpg") no-repeat center center;
+        background-size: 100% 100%;
+      }
+    }
+  </style>
+  <script>
+    var timeoutId = null;
+
+    function startTimerAndExit() {
+      timeoutId = setTimeout(function () {
+        exit();
+      }, 3000);
+    }
+
+    function play() {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      var jwt = getQueryParameterByName('jwt');
+      if (jwt) {
+        location.href = location.protocol + '//' + location.host + '?jwt=' + jwt;
+      } else {
+        location.href = location.protocol + '//' + location.host;
+      }
+    }
+
+    function exit() {
+      try {
+        var data = btoa(
+          JSON.stringify({
+            type: 'close'
+          })
+        );
+        if (window.android && window.android.__externalCall) {
+          window.android.__externalCall(data);
+        }
+        if (window.__externalCall) {
+          window.__externalCall(data);
+        }
+        webkit.messageHandlers.callback.postMessage(data);
+      } catch (e) {
+        console.error('external call failed');
+      }
+    }
+
+    function getQueryParameterByName(name) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+      var results = regex.exec(window.location.href);
+      if (!results) {
+        return null;
+      }
+      if (!results[2]) {
+        return '';
+      }
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+  </script>
+</head>
+<body onload="startTimerAndExit()">
+  <div class="container" onclick="play()"></div>
+</body>
+</html>

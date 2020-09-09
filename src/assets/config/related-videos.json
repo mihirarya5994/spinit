@@ -1,0 +1,19 @@
+{
+  "videos": [
+    {
+      "url": "Andhadhun_Blind_Piano_Player.mp4",
+      "poster": "Andhadhun001.png",
+      "deepLink": "http://jioimages.cdn.jio.com/mailer/user-agent.html?id=4a408c80a63211e89dcf97b2983a7604&type=6&referrer=utm_source%3DMardKaDardPlayAlong"
+    },
+    {
+      "url": "Andhadhun_Love_of_His_Life.mp4",
+      "poster": "Andhadhun002.png",
+      "deepLink": "http://jioimages.cdn.jio.com/mailer/user-agent.html?id=143122a0a1e411e8bc024bc377d27b1f&type=6&referrer=utm_source%3DMidnightDatePlayAlong"
+    },
+    {
+      "url": "Andhadhun_The_Women_Who_Change_His_Life.mp4",
+      "poster": "Andhadhun003.png",
+      "deepLink": "http://jioimages.cdn.jio.com/mailer/user-agent.html?id=915825d0a6fd11e89dcf97b2983a7604&type=6&referrer=utm_source%3DSRudraKaGyaanPlayAlong"
+    }
+  ]
+}

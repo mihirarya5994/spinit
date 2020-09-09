@@ -1,0 +1,53 @@
+@import '~src/assets/styles/helpers/variables';
+
+.home-component {
+  color: #FFFFFF;
+  font-family: $primary-font-family;
+  font-size: $primary-font-size;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(src/assets/images/spin/BG.svg);
+  // background-color: #FFFFFF;
+  &.on-won {
+    background: url(src/assets/images/spin/CongratulationsBGSmall.svg);
+    @media screen and (min-device-height: 700px) {
+      background: url(src/assets/images/spin/CongratulationsBG.svg);
+    }
+  }
+  &.on-lost {
+    background: url(src/assets/images/spin/BetterLuckNextTimeBGSmall.svg);
+    // background-color: #FFFFFF;
+    @media screen and (min-device-height: 700px) {
+      background: url(src/assets/images/spin/BetterLuckNextTimeBG.svg)
+    }
+  }
+  .content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &.with-Footer {
+      bottom: 60px;
+    }
+    &.without-header {
+      top: 0;
+    }
+  }
+}
+
+app-confetti {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

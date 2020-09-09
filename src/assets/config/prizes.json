@@ -1,0 +1,11 @@
+{
+  "coupons": [
+    {
+      "mapping": "profilecompletion",
+      "planId": 1085514,
+      "couponName": "Recharge discount worth Rs.100",
+      "description": "For 10 Lucky Winners Everyday",
+      "imageName": "prizes.png"
+    }
+  ]
+}

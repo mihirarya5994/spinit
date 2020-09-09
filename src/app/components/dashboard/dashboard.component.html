@@ -1,0 +1,138 @@
+<app-loader *ngIf= "loading"></app-loader>
+<div class="dashboard-component"  *ngIf = "!loading">
+  <div class="content">
+    <div class="sponsor-block" *ngIf = "sponsorText">
+      <div class="sponsor-text">
+        SPONSERED BY
+      </div>
+      <div class="sponsor-logo">
+        <img [src]="logo">
+      </div>
+    </div>
+
+<div id="mainbox" class="mainbox text-center">
+  <div class="marker" *ngIf="!Winner">
+    <img src="assets/images/spin/Marker.svg">
+  </div>
+  <div class="spin-text" *ngIf="!Winner">
+    SPIN
+  </div>
+
+  <div id="box" class="box" [class.colours] = "colours">
+    
+      <div [style.background-color]="tabs[5].colour">
+        <!-- <span class="span3">YOU</span> -->
+        <p class="span1">{{tabs[5].name}}</p>
+        <p class="span2">{{tabs[5].desc}}</p>
+      </div>
+      <div style ="height:148px;"[style.background-color]="tabs[0].colour">
+        <p  class="span1">{{tabs[0].name}}</p>
+        <p  class="span2">{{tabs[0].desc}}</p>
+      </div>
+      <div [style.background-color]="tabs[1].colour">
+        <!-- <span style="top:79px;" class="span3">YOU</span> -->
+        <p class="span1">{{tabs[1].name}}</p>
+        <p class="span2">{{tabs[1].desc}}</p>
+      </div>
+      <div [style.background-color]="tabs[2].colour">
+        <p class="span1">{{tabs[2].name}}</p>
+        <p class="span2">{{tabs[2].desc}}</p>
+      </div>
+      <div [style.background-color]="tabs[3].colour">
+        <!-- <span style="top: 84px;
+        left: 31px;
+        "class="span3">YOU</span> -->
+        <p class="span1">{{tabs[3].name}}</p>
+        <p class="span2">{{tabs[3].desc}}</p>
+      </div>
+      <div> 
+        <p class="span1">{{tabs[4].name}}</p>
+        <p class="span2">{{tabs[4].desc}}</p>
+      </div>
+  </div>
+</div>
+
+
+<div class="spin-btn text-center" (click)="getspin()">
+  SPIN THE WHEEL
+</div>
+
+<div class="banner-add">
+  <div class="ads-component" class="billboard-Ads">
+    <ins class="adsbyvmax" #ad data-language-of-article="eng" data-adspot-key="1a40c6d9" data-pkg-name="com.jio.mq"
+      data-cache-count="999"></ins>
+  </div>
+</div>
+
+  </div>
+  <div class="content popup" *ngIf="Winner" id="up">
+    <div class="congrats-block text-center">
+      <div class="cong-text">
+        Awesome!
+      </div>
+      <div class="win-text">
+        YOU ARE ELIGIBLE TO WIN
+      </div>
+      <div class="win-prize">
+        {{Spin_Prize}} {{prizeDesc}}
+      </div>
+    </div>
+  </div>
+  <div class="quiz-block" *ngIf="Winner2">
+    <div class="quiz-header text-center">
+      ANSWER THIS TO WIN
+    </div>
+    <div class="quiz-options text-center">
+
+      <div *ngIf="quesTag" class="counter">QUESTION {{currentQuestionIndex}}/{{quiz.length}}</div>
+
+      <div class="ques-text">
+        {{ currentQuestion?.qDesc }}
+      </div>
+      <div class="option-block">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_eng; let i = index" 
+        [class.selected]="option.desc === selectedOption"
+        [class.correct]="option.desc === answerCorrect"
+        [class.incorrect]="option.desc === answerWrong"
+        [disabled] = 'selectedOption?.length'
+         (click)="selectOption(option)">
+          {{ option.desc }}
+        </button>
+      </div>
+      <div class="banner-add" *ngIf="Winner">
+        <div class="ads-component" class="billboard-Ads">
+          <ins class="adsbyvmax" #ad data-language-of-article="eng" data-adspot-key="1a40c6d9" data-pkg-name="com.jio.mq"
+            data-cache-count="999"></ins>
+        </div>
+      </div>
+    </div>
+
+ 
+
+  </div>
+</div>
+
+   
+
+
+    <!-- <h3>Press the wheel to land on a random prize</h3>
+<h3>Or press the button to land on the corresponding prize</h3>
+<ngx-wheel
+  #wheel
+  width='400'
+  height='400'
+  spinDuration='8'
+  [items]='items'
+  [innerRadius]='20'
+  [spinAmount]='10'
+  [textOrientation]='textOrientation'
+  [textAlignment]='textAlignment'
+  pointerStrokeColor='black'
+  pointerFillColor='gold'
+  [idToLandOn]='idToLandOn'
+  (onSpinStart)='before()'
+  (onSpinComplete)='after()'
+></ngx-wheel>
+<div class="buttons">
+  <button (click)="spin()">spin</button>
+</div> -->

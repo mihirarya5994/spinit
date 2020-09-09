@@ -1,0 +1,14 @@
+<div class="video-player-bg"></div>
+<div class="video-player-component">
+  <video autoplay (click)="checkMedia($event)" controls poster="assets/images/Video.png">
+    <source src="assets/media/related-videos/{{ url }}" type="video/mp4" />
+  </video>
+  <!-- <p>Click on the video to play/pause.</p> -->
+  <!-- <p *ngIf="videoF" >Watch the video and take Quiz to win a Recharge Voucher.</p> -->
+  <div class="submit-btn" *ngIf="videoF" (click)="showQuiz()">
+    <button type="button" style="position:absolute; top:0; width: 95%">Take Quiz</button>
+  </div>
+</div>
+<div class="close" (click)="back()">
+  <img src="assets/images/close_icn_video.png" />
+</div>

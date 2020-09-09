@@ -1,0 +1,62 @@
+@import './../helpers/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $primary-font-size;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $primary-font-family;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+  background: $background-color1;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.carousel {
+  .flickity-viewport {
+    max-height: 100%;
+  }
+  .flickity-page-dots {
+    bottom: 10px;
+    .dot {
+      width: 6px;
+      height: 6px;
+      margin: 0 3px;
+      background: #FFF;
+      opacity: 1;
+      &.is-selected {
+        background: #F6581F;
+      }
+    }
+  }
+  &.carousel3 {
+    .flickity-page-dots {
+      bottom: 15px;
+    }
+  }
+}
+video {
+  &::-webkit-media-controls-overlay-play-button {
+    display: none;
+  }
+}

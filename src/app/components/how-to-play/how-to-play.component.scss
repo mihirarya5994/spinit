@@ -1,0 +1,90 @@
+.how-to-play-component{
+  height: 100%;
+  width: 100%;
+  background: url(src/assets/images/spin/ThankYouBGSmall.svg);
+  // background-color: #FFFFFF;
+  @media screen and (min-device-height: 700px) {
+    background: url(src/assets/images/spin/ThankYouBG.svg);
+  }
+
+  .congrats-block{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    @media screen and (max-device-height: 570px) {
+      top: 44%;
+    }
+    .complete-text{
+      font-size: 0.6em;
+      font-family: 'Montserrat-Semibold';
+    }
+    .congrats-text{
+      font-family: 'Montserrat-Black';
+      font-size: 2em;
+      @media screen and (max-device-height: 570px) {
+        font-size: 1.7em;
+      }
+    }
+    .congrats-text-2{
+      font-family: 'Montserrat-Semibold';
+      font-size: 1em;
+      padding-top: 15px;  
+      @media screen and (max-device-height: 570px) {
+       padding-top: 0px;
+      }
+    }
+    .lost-text{
+      font-family: 'Montserrat-Semibold';
+    }
+    .won-text{
+      font-family: 'Montserrat-Black';
+      font-size: 2em;
+    }
+  }
+
+  .app-block{
+    font-family: 'Montserrat-Semibold';
+    width: 100%;
+    position: absolute;
+    bottom: 17%;
+    margin-left: 5%;
+    @media screen and (min-device-height: 700px) {
+      bottom:23%;
+    }
+  
+    .apps{
+      width: 90%;
+      height: 20%;
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      .app{
+        width: 40%;
+        margin: 5px;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .engage-link{
+    font-family: 'Montserrat-Semibold';
+    color: white;
+    position: fixed;
+    bottom: 11%;
+    width: 100%;
+  }
+
+  .banner-add{
+    // position: absolute;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    background-color: #5D1369;
+  }
+
+}

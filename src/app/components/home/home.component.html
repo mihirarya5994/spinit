@@ -1,0 +1,12 @@
+<div class="home-component" 
+[class.on-lost]="showLostscreen" 
+[class.on-won]="showWonscreen">
+  <bb-header [showParticipantsCount]="showParticipantsCount"></bb-header>
+  <div class="content" [class.without-header]="!showHeader" >
+    <!--[class.with-Footer]="showFooter"-->
+
+    <router-outlet></router-outlet>
+  <!-- </div>
+  <bb-footer *ngIf="showFooter"></bb-footer>
+</div> -->
+<app-confetti *ngIf="showConfetti" [clickable]="confettiClickable" (hide)="hideConfetti()"></app-confetti>

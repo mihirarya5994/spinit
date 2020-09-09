@@ -1,0 +1,8 @@
+<div class="footer-component" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+  <div class="tile" *ngFor="let link of navLinks" (click)="navigate(link)">
+    <div class="img-wrap">
+      <img src="assets/images/footer/{{activeItem?.route === link.route ? link.activeImg : link.img}}">
+    </div>
+    <div class="text">{{link.title}}</div>
+  </div>
+</div>

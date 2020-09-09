@@ -1,0 +1,59 @@
+<div class="prizes-component">
+  <div class="top-container">
+    <div class="text-center">
+      <img src="assets/images/herzindagi/Sonam Kapoor_Quiz Images/main.jpg">
+    </div>
+  </div>
+  <div class="bottom-container">
+    <div class="tabs">
+
+      <div class="tab active" *ngFor="let tab of tabs" [class.active]="activeTab.id == tab.id" (click)="setTab(tab)">
+        {{tab.title}}
+      </div>
+
+
+
+
+    </div>
+    <div class="content" [class.hidden]="activeTab.id !== 2">
+      <div *ngFor="let prize of prizeList" class="prizes-list">
+        <div>
+          <img src="assets/images/coupon/{{prize.imageName }}">
+        </div>
+        <div>
+          <h3>{{ prize.couponName }}</h3>
+          <p>{{ prize.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="content" [class.hidden]="activeTab.id !== 1">
+      <!-- <div *ngIf="prizes==''">
+  <p> Ooops you have no Coupons to display</p>
+ </div> -->
+      <!-- <div class="item" *ngFor="let item of prizes">
+   <div class="img-wrap">
+     <img src="{{ item.img }}" />
+   </div>
+   <div class="details">
+     <div class="title">{{ item.name }}</div>
+     <div class="desc">{{ item.desc }}</div>
+     <div class="code-wrap">
+       <div class="code">{{ item.couponCode }}</div>
+       <div class="expiry">
+         <div class="text">Expiry Date</div>
+         <div class="date">{{ item.expiryDate | date: 'd MMM yyyy' }}</div>
+       </div>
+     </div>
+     <div class="btn-wrap">
+       <button (click)="copy(item.couponCode)">copy</button>
+       <button *ngIf="item.claimUrl" class="claim" (click)="claim(item.claimUrl)">
+         claim
+       </button>
+     </div>
+   </div>
+ </div> -->
+
+    </div>
+
+  </div>
+</div>

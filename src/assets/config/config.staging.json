@@ -1,0 +1,21 @@
+{
+  "API_HOST": "https://bbuat.jiokhelo.com/api",
+  "QUIZ_API_HOST": "https://3074.link/api1",
+  "SOCKET_CLUSTER_HOST": "3074.link",
+  "SOCKET_CLUSTER_PORT": 8000,
+  "BROADCAST_CHANNEL_NAME": "PlayAlongSubscription",
+  "LOGS_ENABLED": true,
+  "SHARE_MESSAGE": "Come join me on Jio Bigg Boss Play Along on MyJio. Give your opinion on exclusive happenings in the Bigg Boss House. Download MyJio at https://www.jio.com/getmyjio.",
+  "DASHBOARD_SLIDER_AUTOPLAY_DURATION": 3,
+  "SENTIMETER_SLIDER_AUTOPLAY_DURATION": 10,
+  "TNC_URL": "http://jiobb.jiokhelo.com/terms-and-conditions.html",
+  "HOW_TO_PLAY_URL": "http://jiobb.jiokhelo.com/",
+  "FAQ_URL": "http://jiobb.jiokhelo.com/faq.html",
+  "MY_WINNINGS_ANDROID_LINK": "https://www.jio.com/my_coupon",
+  "MY_WINNINGS_IOS_LINK": "myjio://com.jio.myjio/my_coupons",
+  "LAUNCH_BROWSER_FOR_VIDEO_CAPTURE": true,
+  "MAX_VIDEO_SIZE": 52428800,
+  "SUPPORTED_FILE_EXTENSIONS": ["video/x-flv", "video/mp4", "video/quicktime", "video/x-msvideo", "video/x-ms-wmv", "video/ogg", "video/webm", "video/3gpp"],
+  "UGC_ENABLED": true,
+  "UPLOAD_FE_HOST": "https://bbupload.jiokhelo.com"
+}

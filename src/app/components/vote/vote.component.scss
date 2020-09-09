@@ -1,0 +1,94 @@
+$num-segments: 6;
+$colors:( white, pink, blue, green, yellow, blue, yellowgreen, lightblue, green, blue, green, pink);
+
+
+
+
+
+.mainbox{
+  position: relative;
+  background: #F44336 ;
+  width: 500px;
+  height: 500px;
+}
+.mainbox:after{
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  // background: url('arrow-left.png') no-repeat;
+  background-size: 32px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box{
+  position: absolute;
+  top: 10%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: gray;
+  transition: all ease 5s;
+
+  
+}
+
+.box div {
+  position: absolute;
+  transform-origin: bottom right;
+  width: 100px;
+  height: 100px;
+  font-size: 1em;
+  color: black;
+ 
+}
+
+.box {
+  div {
+    @for $i from 1 to $num-segments + 1  {
+      &:nth-child(#{$i}) {
+        @if $i == $num-segments {
+          overflow: hidden;
+          &:before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: nth($colors, $i);
+            top: 0;
+            left: 0;
+            position: absolute;
+            transform-origin: bottom right;
+            transform: rotate(-90 + (360 / $num-segments) + deg);
+          }
+        } @else {
+          background: nth($colors, $i);  
+        }
+        transform: rotate((($i - 1) * 360 / $num-segments) + deg);
+
+        span {
+          position: absolute;
+          left: 35px;
+          top: 35px;
+          color: black;
+        }
+      }
+    }
+    
+  }
+}
+
+.marker {
+  position: absolute;
+    left: 14%;
+}
+
+
+.mainbox.animate:after{
+  animation: animateArrow 0.7s ease infinite;
+}
+// @keyframes animateArrow{
+//   50%{
+//     right: -40px;
+//   }

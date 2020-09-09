@@ -1,0 +1,57 @@
+ <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spin2Win</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56816637-76"></script> -->
+
+  <script src='//assets.adobedtm.com/launch-EN023c63264b5e425dbe4fabbaad974ef1-development.min.js'></script>
+  <!-- <script src='//assets.adobedtm.com/launch-ENa9b95c31076d4826bceb3932107aa4a9.min.js'></script> -->
+  <script src="https://rawcdn.githack.com/zarocknz/javascript-winwheel/229a47acc3d7fd941d72a3ba9e1649751fd10ed5/Winwheel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-56816637-76');
+  </script>
+</head> -->
+</head>
+
+<body>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?
+    id=GTM-TDJBK5Z" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+  <bb-root></bb-root>
+  <script type="text/javascript">
+    window.AD_USER = {};
+    window.AD_INFO = {};
+    console.log('Adid passed to JioAds ' + JSON.stringify(window.AD_USER));
+    console.log('AdInfo passed to JioAds ' + JSON.stringify(window.AD_INFO));
+    window.ADSDKEXT = {};
+  </script>
+  <script type="text/javascript">
+    window.digitalData = window.digitalData || [];
+    function atag() {
+      window.digitalData = arguments[0];
+
+      if (window.digitalData.page) {        
+        _satellite.track('pageLoad');
+      }else if(window.digitalData.questionID){
+        _satellite.track('questionNo')
+      } else {
+        _satellite.track('linkTracking');
+      }
+    }
+  </script>
+  <script src="https://jioads.akamaized.net/WSDK_JAWS/ad.js?ver=v1.1.5"></script>
+</body>
+
+</html>

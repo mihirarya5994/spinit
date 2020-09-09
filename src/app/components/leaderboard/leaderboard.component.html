@@ -1,0 +1,28 @@
+<div class="leaderboard-component">
+  <!-- <div class="tabs">
+    <div class="tab" *ngFor="let tab of tabs" [class.active]="currentTab.id === tab.id" (click)="setTab(tab)">{{tab.title}}</div>
+  </div> -->
+  <div class="content">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>User Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of currentTab.data">
+          <td width="25%">{{row.rank}}</td>
+          <td width="50%">{{row.name}}</td>
+          <td width="25%">{{row.score | number}}</td>
+        </tr>
+        <tr class="current" *ngIf="currentUser">
+          <td width="25%">{{currentUser.rank}}</td>
+          <td width="50%">{{currentUser.name}}</td>
+          <td width="25%">{{currentUser.score | number}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

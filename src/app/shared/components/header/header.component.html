@@ -1,0 +1,30 @@
+<div class="header-component">
+  <div class="left" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+    <div class="back" *ngIf="showback" (click)="back()">
+      <img src="assets/images/Backl.svg">
+    </div>
+    <div class="participants-count" *ngIf="showParticipantsCount">
+      <!-- <div class="top">Participants</div>
+      <div class="bottom">{{participantsCount | number}}</div> -->
+    </div>
+  </div>
+  <div class="center">
+    <div class="logo">
+      <img src="assets/images/spin/Spin2Win.svg">
+    </div>
+  </div>
+  <div class="right" (click)="showSettings()" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+    <div class="brand">
+      <img src="assets/images/spin/Jio.svg">
+    </div>
+    <div class="points">
+      <div class="text">
+        <div class="top">Points</div>
+        <div class="bottom">{{myPoints | number}}</div>
+      </div>
+      <div class="points-img">
+        <img src="assets/images/points_icon.png">
+      </div>
+    </div>
+  </div>
+</div>

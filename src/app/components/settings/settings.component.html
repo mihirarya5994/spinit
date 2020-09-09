@@ -1,0 +1,95 @@
+<div class="settings-component">
+  <div class="settings-block navs">
+    <div class="setting" (click)="navigateToExternalUrl('how-to-play')">
+      <div class="left">
+        <div class="question">How to Play?</div>
+      </div>
+      <div class="right">
+        <img src="assets/images/settings_arrow.png">
+      </div>
+    </div>
+    <div class="setting" (click)="navigateToExternalUrl('faq')">
+      <div class="left">
+        <div class="question">FAQ</div>
+      </div>
+      <div class="right">
+        <img src="assets/images/settings_arrow.png">
+      </div>
+    </div>
+    <div class="setting" (click)="navigateToExternalUrl('tnc')">
+      <div class="left">
+        <div class="question">Terms & Conditions</div>
+      </div>
+      <div class="right">
+        <img src="assets/images/settings_arrow.png">
+      </div>
+    </div>
+    <div class="setting" (click)="invite()">
+      <div class="left">
+        <div class="question">Invite Friends</div>
+      </div>
+      <div class="right">
+        <img src="assets/images/settings_arrow.png">
+      </div>
+    </div>
+  </div>
+  <!-- <div class="edit-text">Edit Profile</div>
+  <div class="settings-block profile">
+    <div class="setting">
+      <div class="left">
+        <div class="question">What is your nickname?</div>
+        <div class="answer">{{settings.name}}</div>
+      </div>
+      <div class="right edit" (click)="editProfile(1)">Edit</div>
+    </div>
+    <div class="setting">
+      <div class="left">
+        <div class="question">Where are you from?</div>
+        <div class="answer">{{settings.state}}</div>
+      </div>
+      <div class="right edit" (click)="editProfile(2)">Edit</div>
+    </div>
+    <div class="setting">
+      <div class="left">
+        <div class="question">What is your gender?</div>
+        <div class="answer">{{settings.gender}}</div>
+      </div>
+      <div class="right edit" (click)="editProfile(3)">Edit</div>
+    </div>
+    <div class="setting">
+      <div class="left">
+        <div class="question">What is your age?</div>
+        <div class="answer">{{settings.ageGroup}}</div>
+      </div>
+      <div class="right edit" (click)="editProfile(4)">Edit</div>
+    </div>
+  </div>
+  <div class="submit-btn">
+    <button type="button" (click)="save()">Save</button>
+  </div> -->
+</div>
+
+<div class="edit-screen-wrap" *ngIf="stepForEdit">
+  <div class="edit-screen-bg"></div>
+  <div class="edit-screen">
+    <div class="quiz-content">
+      <div class="question">{{stepForEdit.question}}</div>
+      <div class="options" *ngIf="stepForEdit.options">
+        <div class="option"
+          *ngFor="let option of stepForEdit.options"
+          [class.selected]="option.selected"
+          (click)="saveStepAnswer(stepForEdit, option)">{{option.title}}</div>
+      </div>
+      <div class="input-wrap" *ngIf="stepForEdit.isInputField">
+        <input type="text" #nickname [value]="settings.name">
+        <div class="err" *ngIf="error">{{error}}</div>
+      </div>
+    </div>
+    <div class="submit-btn" *ngIf="stepForEdit.id === 1">
+      <button type="button" (click)="saveStep1Answer(stepForEdit)">Save</button>
+    </div>
+  </div>
+  <div class="close" (click)="close()">
+    <img src="assets/images/small_close_icon.png">
+  </div>
+</div>

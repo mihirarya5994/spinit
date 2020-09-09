@@ -1,0 +1,82 @@
+<div class="recurring-quiz-component" *ngIf="!showQuizResults && !loading">
+  <div class="content">
+    <!-- <button type="button" (click)=open()>Show</button> -->
+    <div class="modal" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title">Your Score</h5>
+          </div>
+          <div class="modal-body text-center">
+            <div class="blob">
+              <img src="assets/images/saavn/pink.svg">
+              <div class="user-score">
+                <h3><span>{{user_score}}</span>/{{max_score}}</h3>
+              </div>
+            </div>
+            <div class="blob-text">
+              <h3>{{user_text1}}</h3>
+              {{user_text2}}
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-primary btn-lg" (click)="gotoQuiz()"
+              style="margin-bottom: 10px;">{{btn_text}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="text-center">
+      <img src="assets/images/saavn/main.png">
+    </div> -->
+
+    <div class="quiz-transperent-block">
+      <!-- <div class="header" *ngIf="quiz.questions.length >= currentQuestionIndex" >
+      <div class="top">Question</div>
+      <div class="bottom">{{currentQuestionIndex}} of {{quiz.questions.length}}</div>
+    </div> -->
+      <div class="level-header">
+        <div class="level">
+          Level {{level}} of 3 
+        </div>
+        <div class="qcount">Question {{currentQuestionIndex}}/{{quiz.questions.length}}</div>
+      </div>
+      <hr />
+      <div class="desc">
+        {{ currentQuestion?.qDesc }}
+      </div>
+      <!-- <div class="state-text correct" *ngIf="currentQuestion && currentQuestion?.isCorrectAnswer === true">Correct Answer.</div> -->
+      <!-- <div class="state-text incorrect" *ngIf="currentQuestion && currentQuestion?.isCorrectAnswer === false">Wrong Answer.</div> -->
+      <!-- <div class="state-text" *ngIf="
+          currentQuestion &&
+          currentQuestion?.duration <= 0 &&
+          !(currentQuestion?.userAnswer && currentQuestion?.userAnswer?.length)
+        ">
+        You have not answered.
+      </div> -->
+      <div class="vote-block">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_eng; let i = index" 
+        [class.selected]="option.desc === selectedOption" (click)="selectOption(option)" [disabled]="selectedOption?.length">
+          {{ option.desc }}
+        </button>
+        <!-- <button type="button" class="option"  *ngFor="let option of currentQuestion?.opt_eng; let i = index"
+          [class.selected]="option.desc === selectedOption" disabled>
+          <span class="option-text" (click)="selectOption(option)">{{ option.desc }}</span> -->
+        <!--[class.correct]="option.correct"
+          [class.incorrect]="option.incorrect"-->
+        <!-- </button> -->
+        <div class="submit" *ngIf="enableSubmit" (click)="submitQuiz()">
+          <button type="button" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="text-center">
+  <img style="width: 100%" src="assets/images/saavn/Inside_Page.jpg">
+</div>
+
+<!-- <div class="recurring-quiz-component" *ngIf="!loading && sms.id !== 'active' && showQuizResults"
+  style="background:rgba(0,0,0,0.5); margin: 1rem;">
+</div> -->

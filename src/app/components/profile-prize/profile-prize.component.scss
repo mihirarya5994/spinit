@@ -1,0 +1,51 @@
+.profile-prize-component {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .pp-bg {
+    background-color: #000;
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .pp-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    border-radius: 6px;
+    padding: 15px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    z-index: 2;
+    .check {
+      img {
+
+      }
+    }
+    .message {
+      font-weight: 600;
+    }
+    .prize {
+      margin: 15px 0;
+      img {
+
+      }
+    }
+    .done-btn-wrap {
+      border: 1px solid #492764;
+      color: #2B0449;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 40px;
+      display: inline-flex;
+      border-radius: 30px;
+    }
+  }
+}

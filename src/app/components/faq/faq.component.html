@@ -1,0 +1,44 @@
+<app-loader *ngIf="loading"></app-loader>
+<div class="faq-component" *ngIf = "!loading">
+
+  <div class="congrats-block text-center">
+    <div class="congrats-text">
+      {{congratsText}}
+    </div>
+    <div class="congrats-text-2">
+      {{congratsText2}}
+      <div class="lost-text" *ngIf="lost">
+        YOU CAN TRY AGAIN TOMORROW
+      </div>
+      <div class="won-text" *ngIf="won">
+        {{prize}}
+      </div>
+    </div>
+    <div class="check-back" *ngIf="won">
+      CHECK BACK ON <span> {{dd}}<sup>{{sup}}</sup> {{mon}}</span>
+    </div>
+  </div>
+
+  <div class="app-block">
+    <div class="block-head">
+      Play these Engagements to Win More Prizes
+    </div>
+    <div class="apps" >
+      <div class="app" *ngFor="let app of apps ; let i= index" (click)="gotogame(app, i)">
+        <img [src]="app.imageUrl">
+      </div>
+    </div>
+  </div>
+
+  <div class="engage-link text-center">
+    <u (click)="gotoengage()">CONTINUE TO JIOENGAGE</u>
+  </div>
+
+  <div class="banner-add">
+    <div class="ads-component" class="billboard-Ads">
+      <ins class="adsbyvmax" #ad data-language-of-article="eng" data-adspot-key="1a40c6d9" data-pkg-name="com.jio.mq"
+        data-cache-count="999"></ins>
+    </div>
+  </div>
+
+</div>

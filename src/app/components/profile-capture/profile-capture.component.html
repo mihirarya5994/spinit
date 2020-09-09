@@ -1,0 +1,53 @@
+<div class="profile-capture-component-bg1"></div>
+<div class="profile-capture-component-bg"></div>
+<div class="profile-capture-component">
+  <!-- <div class="close" (click)="close()"><img src="assets/images/close_icn.png" /></div> -->
+  <div class="quiz-content">
+    <form [formGroup]="profileForm" (submit)="submit()" novalidate>
+      <div class="form-field">
+        <label>Nick Name</label> 
+        <input type="text" formControlName="name" style="width:91%" placeholder="Enter a nick name"/>
+        <div class="err" *ngIf="submitted && profileForm.controls.name.errors?.required">
+          Please enter a valid nickname.
+        </div>
+        <div class="err" *ngIf="submitted && profileForm.controls.name.errors?.pattern">
+          Please enter a valid Nickname.
+        </div>
+        <div class="err" *ngIf="submitted && profileForm.controls.name.errors?.maxlength">
+          Nickname cannot be longer than 8 characters.
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Age</label>
+        <select formControlName="ageGroup">
+          <option value="">Choose an age group</option>
+          <option [value]="group.value" *ngFor="let group of ageGroups">{{ group.title }}</option>
+        </select>
+        <div class="err" *ngIf="submitted && profileForm.controls.ageGroup.errors?.required">
+          Please select your age group.
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Gender</label>
+        <select formControlName="gender">
+          <option value="">Choose your gender</option>
+          <option [value]="gender.value" *ngFor="let gender of genders">{{ gender.title }}</option>
+        </select>
+        <div class="err" *ngIf="submitted && profileForm.controls.gender.errors?.required">
+          Please select your gender.
+        </div>
+      </div>
+      <div class="form-field">
+        <label>State</label>
+        <select formControlName="state">
+          <option value="">Choose your state</option>
+          <option [value]="state.value" *ngFor="let state of states">{{ state.title }}</option>
+        </select>
+        <div class="err" *ngIf="submitted && profileForm.controls.state.errors?.required">
+          Please select your state.
+        </div>
+      </div>
+      <div class="submit-btn"><button type="submit">Done</button></div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+.profile-capture-component-bg1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(/assets/images/splash/splash_bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+.profile-capture-component-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #142736;
+  opacity: 0.7;
+}
+
+.profile-capture-component {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  color: #fff;
+
+  .close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .quiz-content {
+    margin: 50px 0 25px;
+
+    form {
+      .form-field {
+        margin: 15px 0;
+        label {
+          display: block;
+          font-size: 4vw;
+          font-family: jio-bold;
+        }
+
+        input,
+        select {
+          height: 46px;
+          width: 100%;
+          border-radius: 6px;
+          border: none;
+          outline: none;
+          padding: 0 15px;
+          font-size: 16px;
+          background: #FFF;
+        }
+
+        .err {
+          color: red;
+          margin: 5px 0;
+        }
+      }
+    }
+
+    .level {
+      text-transform: uppercase;
+      font-size: 3vw;
+      font-weight: 600;
+      color: #e6b137;
+    }
+
+    .question {
+      font-size: 4vw;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .options {
+      overflow-y: auto;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      bottom: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 18vh;
+
+      .option {
+        max-width: 80vw;
+        width: 90%;
+        margin: 3px;
+        border: 1px solid #5f4b75;
+        padding: 8px;
+        border-radius: 6px;
+        font-size: 4.5vw;
+        background: #fff;
+        color: #000;
+
+        &.selected {
+          color: #292929;
+          background-color: #ec9427;
+          border-color: #ec9427;
+        }
+      }
+    }
+
+    .input-wrap {
+      input {
+        height: 46px;
+        min-width: 280px;
+        border-radius: 6px;
+        border: 1px solid #fff;
+        padding: 0 15px;
+        outline: none;
+        font-size: 16px;
+      }
+
+      .err {
+        color: red;
+        text-align: center;
+        font-size: 12px;
+        margin: 10px 15px;
+      }
+    }
+  }
+
+  .submit-btn {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+
+    button {
+      width: 100%;
+      text-transform: uppercase;
+      color: #142736;
+      border-radius: 5px;
+      background-color: #FFF;
+      height: 46px;
+      border: transparent;
+      outline: none;
+      font-size: 4vw;
+      font-weight: 600;
+    }
+  }
+}

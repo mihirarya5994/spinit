@@ -1,0 +1,37 @@
+<div class="splash-component" *ngIf="!loading">
+  <!-- <div class="close" (click)="close()"> -->
+    <!-- <img src="assets/images/small_close_icon.png"> -->
+  <!-- </div>
+  <div class="splash-logo"> -->
+    <!-- <img src="assets/images/logo_top.png"> -->
+  <!-- </div> -->
+  <div class="top" [class.full]="initialProfile.TnC && initialProfile.profileCompleted"></div>
+  <div class="bottom text-center" *ngIf="!initialProfile.TnC || !initialProfile.profileCompleted">
+    <!-- <div class="disclaimer">
+          <img src="assets/images/win.jpg">
+      </div> -->
+    <!-- <div class="disclaimer">
+      <div class="check" [class.checked]="profile.TnC" (click)="acceptTnC()"></div>
+      <div class="text">
+        I am an Indian citizen, above 18 years of age and I accept the
+        <span class="emphasis" (click)="navigateToTnC()">Terms & Conditions</span>.
+      </div>
+    </div> -->
+    <!-- <div
+      class="play-btn"
+      *ngIf="!initialProfile.TnC || !initialProfile.profileCompleted"
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    >
+      <div class="play" (click)="play()">PROCEED</div>
+      <img src="assets/images/prizes_label.png">
+    </div> -->
+
+  </div>
+  <div class=progress-text>
+    LOADING...
+  </div>
+  <div class="progress-bar">
+    <span></span>
+  </div>
+</div>

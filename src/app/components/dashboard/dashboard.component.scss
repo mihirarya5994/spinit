@@ -1,0 +1,402 @@
+@import '~src/assets/styles/helpers/variables';
+
+.dashboard-component {
+  height: 100%;
+  width: 100%;
+
+  // font-family: $primary-font-family;
+  
+  .sponsor-block{
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    position: fixed;
+    top: 8%;
+    .sponsor-text{
+      color: #707070;
+    }
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+
+    $num-segments: 6;
+$colors:( #294678, #FE0000, #FBB03B, #D9E021, #009345, #01A99C, yellowgreen, lightblue, green, blue, green, pink);
+
+
+
+
+
+.mainbox{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  right: 0;
+  bottom: 35%;
+  left: 0;
+  margin: auto;
+}
+.mainbox:after{
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-size: 32px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box{
+  position: absolute;
+  top: 23%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: gray;
+  border: 5px solid white;
+  transition: all ease 10s;
+  box-shadow: 0px 0 1.2em 0 #520D4F;
+ 
+}
+
+.box div {
+  position: absolute;
+  transform-origin: bottom right;
+  width: 150px;
+  height: 150px;
+  font-size: 1em;
+  color: black;
+ 
+}
+
+.box {
+  div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @for $i from 1 to $num-segments + 1  {
+      &:nth-child(#{$i}) {
+        @if $i == $num-segments {
+          overflow: hidden;
+          &:before {
+            content: '';
+            width: 150px;
+            height: 150px;
+            background: nth($colors, $i);
+            top: 0;
+            left: 0;
+            position: absolute;
+            transform-origin: bottom right;
+            transform: rotate(-90 + (360 / $num-segments) + deg);
+          }
+        } @else {
+          background: nth($colors, $i);  
+        }
+        transform: rotate((($i - 1) * 360 / $num-segments) + deg);
+
+        p{
+          font-family: 'Montserrat';
+          position: relative;
+          color: #fff;
+          transform: rotate(-60deg);
+          width:50%;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+
+        }
+        p.span1{
+          font-family: 'MontSerrat-Extrabold';
+          top: 30px;
+          font-size: 18px;
+          text-align: center;
+          left: 14px;
+        }
+        p.span2{
+          font-family: 'Montserrat-Semibold';
+          top: 45px;
+          font-size: 12px;
+          text-align: center;
+          left: -30px;
+        }
+      }
+    }
+    
+  }
+}
+
+.marker {
+  position: relative;
+    top: 10%;
+    z-index:11;
+}
+
+
+.mainbox.animate:after{
+  animation: animateArrow 0.7s ease infinite;
+}
+    .spin-text{
+      font-family: 'Montserrat-Black';
+      width: 70px;
+      height: 70px;
+      color: #4D4D4D;
+      position: relative;
+      top: 38%;
+      left: 38%;
+      z-index: 1111;
+      padding-top: 25px;
+      background: white;
+      border-radius: 50%;
+      font-size: 1.2em; 
+    }
+
+    .spin-btn {
+      background: url(src/assets/images/spin/CTA_BG.svg);
+      width: 70%;
+      font-size:1.3em;
+      margin-left: 15%;
+      border-radius: 35px;
+      height: 7%;
+      padding-top: 10px;
+      position: fixed;
+      bottom: 15%;
+      background-color: #9E3F9B;
+      font-family: 'Montserrat-Semibold';
+      box-shadow: 0.6rem .8rem 1rem #00000029!important; 
+      @media screen and (min-device-height: 800px) {
+        padding-top: 14px;
+      }
+    }
+
+    .banner-add{
+      // position: absolute;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 10%;
+      z-index:1111;
+    }
+
+    }
+
+    .popup {
+      width: 100%;
+      height: 100%;
+      z-index: 9;
+      opacity: 0.9;
+      background: transparent;
+      background: url(src/assets/images/spin/Confetti.svg);
+      background-color: #737373;
+      animation: zoominoutsinglefeatured 1s ease;
+      // animation:Slide_Up 2s ease;
+      .congrats-block {
+        color: white;
+        width: 100%;
+        height: 20%;
+        position: absolute;
+        top: 5%;
+        z-index: 111;
+        animation:Slide_Up 3s ease;
+
+        .cong-text{
+          font-size: 3em;
+          font-family: 'Montserrat-Black';
+        }
+        .win-text {
+          font-family: 'Montserrat-Semibold';
+        }
+        .win-prize{
+          font-size: 2em;
+          font-family: 'Montserrat-Black';
+          @media screen and (max-device-height: 641px) {
+            font-size:1.5em;
+          }
+        }
+      }
+    }
+
+    .quiz-block{
+      width: 100%;
+      height: 70%;
+      position: absolute;
+      top: 30%;
+      z-index: 111;
+      animation:Slide_Up 2s ease;
+      
+      .quiz-header{
+        background-color: #973093;
+        height: 10%;
+        font-family: 'Montserrat-Semibold';
+        padding-top: 10px;
+        font-size: 1.3em;
+        border-radius: 14px 14px 0 0;
+      }
+      .quiz-options{
+        background-color: white;
+        height: 90%;
+        color: #3D3D3D;
+        font-size: 1.2em ;
+        font-family: 'Montserrat-Semibold';
+        padding-top: 3px;
+
+
+        .counter {
+          font-family: 'Montserrat-Semibold';
+          color: #979797;
+          font-size: 0.6em;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        .ques-text {
+          padding-top: 10px;
+          font-size: 1.1em;
+        }
+
+        .option-block {
+          font-family: 'Montserrat-Semibold';
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 5px 0;
+          padding-top: 20px;
+          color: #525252;
+          font-size: 1.5em;
+          @media screen and (max-device-height: 641px) {
+            padding-top: 0px;
+          }
+    
+          .option {
+            font-family: 'Montserrat-Semibold'; 
+            margin: 5px;
+            width: 80%;
+            height: 40px;
+            align-items: center;
+            justify-content: flex-start;
+            text-transform: capitalize;
+            font-size: 0.7em;
+            background-color: #FFF;
+            text-align: center;
+            color: #707070;
+            line-height: 35px;
+            border: 1px solid #CCBCFF;
+            outline: none;
+            &.selected {
+              background-color: #F7BC56;
+              color: #FFFFFF;
+              border:0;
+              outline: none;
+            }
+    
+            .prefix {
+              background: #E0E0E0;
+              border-right: 1px solid #B8B8B8;
+              height: 100%;
+              border-top-left-radius: 6px;
+              border-bottom-left-radius: 6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 15px;
+              width: 16%;
+    
+              .img-wrap {
+                height: 90%;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 2px solid #FFF;
+              }
+            }
+    
+            &.selected {
+              background-color: #F7BC56;
+              border-color: transparent;
+              color: #FFFFFF;
+              outline: none;
+    
+              .prefix {
+                background-color: #FFE400;
+                border-color: transparent;
+    
+                .img-wrap {
+                  border: 2px solid #292929;
+                }
+              }
+            }
+    
+            &.correct {
+              background-color: #008a1d;
+              color: #FFF;
+    
+              .prefix {
+                background-color: #008a1d;
+                border-color: transparent;
+    
+                .img-wrap {
+                  border: 2px solid #008a1d;
+                }
+              }
+            }
+    
+            &.incorrect {
+              background-color: #ff0000;
+              color: #FFF;
+
+            }
+          }
+    
+          
+        
+        }
+
+        .banner-add{
+          // position: absolute;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 10%;
+        }
+      }
+
+
+
+    }
+
+    @keyframes Slide_Up{
+      0%{
+        transform:translateY(250px);
+      }
+      100%{
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes zoominoutsinglefeatured {
+      0% {
+          transform: scale(1,1);
+      }
+      50% {
+          transform: scale(1.2,1.2);
+      }
+  }
+
+}

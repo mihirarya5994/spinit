@@ -1,0 +1,13 @@
+<div class="profile-prize-component" *ngIf="show">
+  <div class="pp-bg"></div>
+  <div class="pp-content">
+    <div class="check">
+      <img src="">
+    </div>
+    <div class="message">{{profilePrize?.text}}</div>
+    <div class="prize" (click)="navigateToMyWinnings()">
+    <img src="assets/images/prizes/once/{{profilePrize?.prize?.img}}">
+    </div>
+    <div class="done-btn-wrap" (click)="hide()">Done</div>
+  </div>
+</div>

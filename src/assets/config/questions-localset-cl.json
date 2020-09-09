@@ -1,0 +1,254 @@
+{  
+   "questions":[ 
+       {  
+          "answer":[  
+             "d"
+          ],
+          "noOfAnswer":1,
+          "_id":"q-9aa51bbb-283b-4743-a553-00304e1a6238",
+          "eventId":"week1",
+          "opt_eng":[  
+             {  
+                "id":"a",
+                "desc":"Vaishali"
+             },
+             {  
+                "id":"b",
+                "desc":"Mahi"
+             },
+             {  
+                "id":"c",
+                "desc":"Pallavi"
+             },
+             {  
+                "id":"d",
+                "desc":"Rashmi"
+             }
+          ],
+          "episodeId":1,
+          "sOn":"2019-02-26T06:30:00.000Z",
+          "eOn":"2019-03-08T03:30:00.000Z",
+          "cPositoin":"845",
+          "q_eng":"NASTY HONESTY",
+          "qDesc":"Do not go gentle into that good night, Old age should burn and rav at close of day, rage against the __________________ 1",
+          "playerId":"deepakthakur",
+          "type":"quiz",
+          "category":"DEFAULT",
+          "points":50,
+          "duration":30,
+          "level":1
+       },
+       {  
+          "answer":[  
+             "d"
+          ],
+          "noOfAnswer":1,
+          "_id":"q-9aa51bbb-283b-4743-a553-00304e1a6238",
+          "eventId":"week1",
+          "opt_eng":[  
+             {  
+                "id":"a",
+                "desc":"Vaishali"
+             },
+             {  
+                "id":"b",
+                "desc":"Mahi"
+             },
+             {  
+                "id":"c",
+                "desc":"Pallavi"
+             },
+             {  
+                "id":"d",
+                "desc":"Rashmi"
+             }
+          ],
+          "episodeId":1,
+          "sOn":"2019-02-26T06:30:00.000Z",
+          "eOn":"2019-03-08T03:30:00.000Z",
+          "cPositoin":"1275",
+          "q_eng":"NASTY HONESTY",
+          "qDesc":"Old age should burn and rav at close of day, rage against the __________________ 2",
+          "playerId":"deepakthakur",
+          "type":"quiz",
+          "category":"DEFAULT",
+          "points":50,
+          "duration":30,
+          "level":1
+       },
+       {  
+          "answer":[  
+             "d"
+          ],
+          "noOfAnswer":1,
+          "_id":"q-9aa51bbb-283b-4743-a553-00304e1a6238",
+          "eventId":"week1",
+          "opt_eng":[  
+             {  
+                "id":"a",
+                "desc":"Vaishali"
+             },
+             {  
+                "id":"b",
+                "desc":"Mahi"
+             },
+             {  
+                "id":"c",
+                "desc":"Pallavi"
+             },
+             {  
+                "id":"d",
+                "desc":"Rashmi"
+             }
+          ],
+          "episodeId":1,
+          "sOn":"2019-02-26T06:30:00.000Z",
+          "eOn":"2019-03-08T03:30:00.000Z",
+          "cPositoin":"1575",
+          "q_eng":"NASTY HONESTY",
+          "qDesc":"Old age should burn and rav at close of day, rage against the __________________ 3",
+          "playerId":"deepakthakur",
+          "type":"quiz",
+          "category":"DEFAULT",
+          "points":50,
+          "duration":30,
+          "level":1
+       }
+    ],
+    "rating":[  
+       { 
+          "opt_img": "cont2.jpg",
+          "episodeId":1,
+          "sOn":"2019-02-26T06:30:00.000Z",
+          "eOn":"2019-03-08T03:30:00.000Z",
+          "cPositoin":"810",
+          "q_eng":"NASTY HONESTY",
+          "qDesc":"Do not go gentle into that good night, Old age should burn and rav at close of day, rage against the __________________ ",
+          "type":"ratings",
+          "category":"DEFAULT",
+          "points":50,
+          "duration":15,
+          "level":1
+       },
+       { 
+          "opt_img": "cont2.jpg",
+          "episodeId":1,
+          "sOn":"2019-02-26T06:30:00.000Z",
+          "eOn":"2019-03-08T03:30:00.000Z",
+          "cPositoin":"1230",
+          "q_eng":"NASTY HONESTY",
+          "qDesc":"Do not go gentle into that good night, Old age should burn and rav at close of day, rage against the __________________ ",
+          "type":"ratings",
+          "category":"DEFAULT",
+          "points":50,
+          "duration":15,
+          "level":1
+       },
+       { 
+          "opt_img": "cont2.jpg",
+          "episodeId":1,
+          "sOn":"2019-02-26T06:30:00.000Z",
+          "eOn":"2019-03-08T03:30:00.000Z",
+          "cPositoin":"1530",
+          "q_eng":"NASTY HONESTY",
+          "qDesc":"Do not go gentle into that good night, Old age should burn and rav at close of day, rage against the __________________ ",
+          "type":"ratings",
+          "category":"DEFAULT",
+          "points":50,
+          "duration":15,
+          "level":1
+       }
+    ],
+    "voting":[  
+     {  
+        "opt_img": [
+          {
+             "name": "Trex", 
+             "desigination" : "Poet", 
+             "image": "cont2.jpg"
+          },
+          {
+             "name": "Trex", 
+             "desigination" : "Poet", 
+             "image": "cont3.jpg"
+          },
+          {
+             "name": "Trex", 
+             "desigination" : "Poet", 
+             "image": "cont4.jpg"
+          }
+        ],
+        "episodeId":1,
+        "sOn":"2019-02-26T06:30:00.000Z",
+        "eOn":"2019-03-08T03:30:00.000Z",
+        "cPositoin":"",
+        "q_eng":"NASTY HONESTY",
+        "qDesc":"Do not go gentle into that good night, Old age should burn and rav at close of day, rage against the __________________ ",
+        "type":"voting",
+        "category":"DEFAULT",
+        "points":50,
+        "duration":5,
+        "level":1
+     }
+  ],
+  "clap":[  
+    { 
+       "episodeId":1,
+       "sOn":"2019-02-26T06:30:00.000Z",
+       "eOn":"2019-03-08T03:30:00.000Z",
+       "cPositoin":"352",
+       "q_eng":"NASTY HONESTY",
+       "type":"clapping",
+       "category":"DEFAULT",
+       "points":50,
+       "duration":15,
+       "level":1
+    },
+    { 
+       "episodeId":1,
+       "sOn":"2019-02-26T06:30:00.000Z",
+       "eOn":"2019-03-08T03:30:00.000Z",
+       "cPositoin":"905",
+       "q_eng":"NASTY HONESTY",
+       "type":"clapping",
+       "category":"DEFAULT",
+       "points":50,
+       "duration":15,
+       "level":1
+    },
+    { 
+       "episodeId":1,
+       "sOn":"2019-02-26T06:30:00.000Z",
+       "eOn":"2019-03-08T03:30:00.000Z",
+       "cPositoin":"1335",
+       "q_eng":"NASTY HONESTY",
+       "type":"clapping",
+       "category":"DEFAULT",
+       "points":50,
+       "duration":15,
+       "level":1
+    }
+ ],
+ "link":[ 
+    { 
+       "opt_img": "cont2.jpg",
+       "episodeId":1,
+       "sOn":"2019-02-26T06:30:00.000Z",
+       "eOn":"2019-03-08T03:30:00.000Z",
+       "cPositoin":"1800",
+       "q_eng":"NASTY HONESTY",
+       "qDesc":"Do not go gentle into that good night, Old age should burn and rav at close of day, rage against the __________________ ",
+       "type":"ratings",
+       "category":"DEFAULT",
+       "points":50,
+       "duration":50,
+       "level":1
+    }
+ ],
+    "answered":false,
+    "weekId":"week1",
+    "level":1,
+    "quizPrize":"week1_1"
+  }
+  
+  
